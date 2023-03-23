@@ -1,0 +1,11 @@
+Script python yazılım dilinin selenium kütüphanesini kullanarak çalışır
+Selenium'un google üzerinden robot işlemlerini gerçekleştirebilmesi için uygun chrome sürümü chrome driver'ına ihtiyacı vardır.
+bu linkten elde edebilirsiniz:
+https://chromedriver.chromium.org/downloads
+(google chromunuzun sürümünü hakkında kısmından öğrenebilirsiniz)
+
+ardından mailpass.txt dosyasına mail ve şifrenizi yazmalısınız
+
+bir kere el ile çalıştırıp robotun google ayarlarınızı kaydetmesini sağlamalısınız.
+
+SCRİPT MAİN.EXE İLE ÇALIŞTIRILIR

@@ -1,0 +1,2 @@
+mail: zabuza@std.yildiz.edu.tr
+password: 123asdd123
