@@ -1,12 +1,13 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
+from datetime import datetime
 import time
 import os
-import tkinter
 
 mail = ""
 password = ""
+saat = ""
 trying = 1
 
 def func(password, mail):
@@ -25,18 +26,25 @@ def func(password, mail):
         trying = 0
         driver.find_element(By.XPATH, '//*[@id="flow-tab"]/div/div[1]/div[3]').click()
         time.sleep(2)
-        tryuntil = 1
-        while (tryuntil):
-            time.sleep(1)
-            driver.refresh()
-            time.sleep(4)
-            try:
-                driver.find_element(By.XPATH, '//*[text()="Derse Katıl"]').click()
-                time.sleep(5)
-                tryuntil = 0
-                break
-            except:
-                pass
+        isrighttime = 1
+        while(isrighttime):
+            time.sleep(60)
+            now = datetime.now()
+            current_time = now.strftime("%H")
+            print(str(current_time))
+            if(str(current_time) == saat):
+                tryuntil = 1
+                while (tryuntil):
+                    time.sleep(1)
+                    driver.refresh()
+                    time.sleep(4)
+                    try:
+                        driver.find_element(By.XPATH, '//*[text()="Derse Katıl"]').click()
+                        time.sleep(5)
+                        tryuntil = 0
+                        break
+                    except:
+                        pass
 
     try:
         driver.find_element(By.XPATH, '//*[@id="Data_Mail"]').send_keys(mail)
@@ -61,6 +69,7 @@ def starter():
     z = open('mailpass.txt', "r").readlines()
     mail = z[0].split(" ")[1].split("\n")[0]
     password = z[1].split(" ")[1]
+    saat = z[2].split(" ")[1]
     func(password, mail)
 
 time.sleep(1)
