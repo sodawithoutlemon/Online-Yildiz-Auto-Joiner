@@ -4,7 +4,7 @@ bu linkten elde edebilirsiniz:
 https://chromedriver.chromium.org/downloads
 (google chromunuzun sürümünü hakkında kısmından öğrenebilirsiniz)
 
-ardından mailpass.txt dosyasına mail ve şifrenizi yazmalısınız
+ardından mailpass.txt dosyasına mail, şifre ve dersin hangi saatte olduğunu örnekle yazmalısınız
 
 bir kere el ile çalıştırıp robotun google ayarlarınızı kaydetmesini sağlamalısınız.
 
